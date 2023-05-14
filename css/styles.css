@@ -63,6 +63,11 @@ h1{
     justify-content:center;
  }
 
+ .contenedorImgs h2,
+ .contenedorImgs h3{
+  color: var(--blanco);
+ }
+
  .columna{
     flex: 1 1 0px;
     height: calc(100vh - (55.7167px + 40.3167px));
@@ -70,6 +75,20 @@ h1{
     background-repeat: no-repeat;
     background-position: 50%;
  }
+
+ #disable1, 
+ #disable2,
+ #disable3{
+  display: none;
+ }
+
+ #titulo1:hover #disable1,
+ #titulo2:hover #disable2,
+ #titulo3:hover #disable3{
+  display: block;
+ }
+
+
 
 
 .footer{
@@ -81,3 +100,21 @@ h1{
     font-size: .8rem;
     color: var(--blanco);
 }
+
+@media (max-width: 1024px) {
+
+  .contenedorImgs{
+    flex-direction: column;
+  }
+  .columna{
+    flex-basis: auto;
+    
+}
+}
+
+@media (max-width: 640px) {
+  .Navegacion-principal{
+    flex-direction: column;
+  }
+}
+
