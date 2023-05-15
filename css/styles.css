@@ -33,6 +33,9 @@ h1{
   h1,h2,h3{
     text-align: center;
   }
+  img{
+    width: 100%;
+  }
 
 .nav-bg{
     background-color: var(--oscuro);
@@ -56,6 +59,11 @@ h1{
    color: var(--gris);
  }
 
+ a img{
+  width: 180px;
+ }
+
+
  .contenedorImgs{
     width: 100%;
     display: flex;
@@ -64,8 +72,21 @@ h1{
  }
 
  .contenedorImgs h2,
- .contenedorImgs h3{
+ .contenedorImgs h4{
   color: var(--blanco);
+ }
+
+ .imgs img{
+  width: 200px;
+  margin:0 auto;
+ }
+
+ #car{
+  width:280px;
+ }
+
+ .imgs{
+  text-align: center;
  }
 
  .columna{
@@ -73,21 +94,62 @@ h1{
     height: calc(100vh - (55.7167px + 40.3167px));
     background-size: cover;
     background-repeat: no-repeat;
+    display:grid;
+    grid-template-rows: 1fr 1fr;
     background-position: 50%;
+    align-items: center;
+    transition:all;
+    transition-duration: 1s;
  }
 
  #disable1, 
  #disable2,
  #disable3{
+  text-align: center;
   display: none;
  }
 
- #titulo1:hover #disable1,
- #titulo2:hover #disable2,
- #titulo3:hover #disable3{
-  display: block;
- }
 
+#c1:hover {
+  transform-origin: left;
+  transform: scaleX(1.2);
+}
+#c2:hover {
+  transform: scaleX(1.2);
+}
+#c3:hover{
+  transform-origin: right;
+  transform: scaleX(1.2);
+}
+
+#c1:hover #disable1,
+#c2:hover #disable2,
+#c3:hover #disable3{
+ display:block;
+}
+
+#c1:hover #titulo1,
+#c2:hover #titulo2,
+#c3:hover #titulo3{
+ transform:translateY(-100px);
+}
+
+
+
+#c1:hover #car{
+  transform-origin: center;
+  transform: scaleX(1.6) scaleY(1.6);
+}
+
+#c2:hover #mt{
+  transform-origin: center;
+  transform: scaleX(1.3) scaleY(1.3);
+}
+
+#c3:hover #mot{
+  transform-origin: center;
+  transform: scaleX(1.3) scaleY(1.5);
+}
 
 
 
@@ -109,7 +171,38 @@ h1{
   .columna{
     flex-basis: auto;
     
-}
+  }
+  #c1:hover,
+  #c2:hover,
+  #c3:hover,
+  #c1:hover #titulo1,
+  #c2:hover #titulo2,
+  #c3:hover #titulo3,
+  #c1:hover #car,
+  #c2:hover #mt,
+  #c3:hover #mot,
+  #c1:hover #disable1,
+  #c2:hover #disable2,
+  #c3:hover #disable3{
+    transform: none;
+    transition: none;
+  }
+
+  #car{
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  #mt,
+  #mot{
+    width: 300px;
+  }
+
+  #disable1,
+  #disable2,
+  #disable3{
+    display: block;
+  }
 }
 
 @media (max-width: 640px) {
