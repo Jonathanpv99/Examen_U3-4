@@ -8,14 +8,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NorthWind Productos</title>
+    <title>NorthWind Carrito</title>
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preload" href="css/styles.css" as="style">
-    <link rel="stylesheet" href="css/styles2.css">
+    <link rel="preload" href="css/styles3.css" as="style">
+    <link rel="stylesheet" href="css/styles3.css">
 </head>
 <body>
     <div class="nav-bg">
@@ -36,6 +36,161 @@
             </a>
 
         </nav>
+    </div>
+
+    <div class="contCarrito sombra">
+        <div class="contProducts">
+            <p>Mi Carrito de Compras (5)</p>
+            <div class="product">
+                <div class="product_img">
+                    <img src="./imgs/chivas.jpg" alt="">
+                </div>
+                <div class="product_info">
+                    <div class="desc">
+                        <p>Producto:</p>
+                        <p>Descripcion:</p>
+                        <p>Precio:</p>
+                        <p>Unidades:</p>
+                        <p>Existencia:</p>
+                    </div>
+                    <div>
+                        <p>Jersery Chivas 110 años</p>
+                        <p>Jerser conmemorativo de los 110 años del chivas</p>
+                        <p>$2,700.00</p>
+                        <input type="number">
+                        <p>20</p>
+                    </div>
+                    <div class="btnel">
+                        <button class="elim">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product_img">
+                    <img src="./imgs/auto.png" alt="">
+                </div>
+                <div class="product_info">
+                    <div class="desc">
+                        <p>Producto:</p>
+                        <p>Descripcion:</p>
+                        <p>Precio:</p>
+                        <p>Unidades:</p>
+                        <p>Existencia:</p>
+                    </div>
+                    <div>
+                        <p>Auto suzuki fjk23 2023</p>
+                        <p>auto familiar susuki modelo 2023 de agencia</p>
+                        <p>$450,000.00</p>
+                        <input type="number">
+                        <p> 7</p>
+                    </div>
+                    <div>
+                        <button class="elim">Eliminar</button>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="product">
+                <div class="product_img">
+                    <img src="./imgs/moto.png" alt="">
+                </div>
+                <div class="product_info">
+                    <div class="desc">
+                        <p>Producto:</p>
+                        <p>Descripcion:</p>
+                        <p>Precio:</p>
+                        <p>Unidades:</p>
+                        <p>Existencia:</p>
+                    </div>
+                    <div>
+                        <p>Moto suzuki ktm honda 400</p>
+                        <p>motocilceta todo terreno suzuki modelo 2023</p>
+                        <p>$270,000.00</p>
+                        <input type="number">
+                        <p>15</p>
+                    </div>
+                    <div>
+                        <button class="elim">Eliminar</button>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="product">
+                <div class="product_img">
+                    <img src="./imgs/motor.png" alt="">
+                </div>
+                <div class="product_info">
+                    <div class="desc">
+                        <p>Producto:</p>
+                        <p>Descripcion:</p>
+                        <p>Precio:</p>
+                        <p>Unidades:</p>
+                        <p>Existencia:</p>
+                    </div>
+                    <div>
+                        <p>Motor suzuki</p>
+                        <p>Motor para lancha marca suzuki con 400 caballos de fuerza</p>
+                        <p>$100,000.00</p>
+                        <input type="number">
+                        <p>22</p>
+                    </div>
+                    <div>
+                        <button class="elim">Eliminar</button>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="product">
+                <div class="product_img">
+                    <img src="./imgs/refri.jpg" alt="">
+                </div>
+                <div class="product_info">
+                    <div class="desc">
+                        <p>Producto:</p>
+                        <p>Descripcion:</p>
+                        <p>Precio:</p>
+                        <p>Unidades:</p>
+                        <p>Existencia:</p>
+                    </div>
+                    <div>
+                        <p>refrigerador samsung</p>
+                        <p>refrigerador de 10 velocidades marca samsung</p>
+                        <p>$50,000.00</p>
+                        <input type="number">
+                        <p>3</p>
+                    </div>
+                    <div> 
+                        <button class="elim">Eliminar</button>
+                    </div>
+                   
+                </div>
+            </div>
+           
+            <button class="btnPagar" onclick="Obtener_Total()">Confirmar Productos</button>
+
+        </div>
+        <div class="contTotal">
+            <button class="btnSeguir">Seguir comprando</button>
+            <div class="contSubT">
+                <div class="st">
+                    <p>subTotal: </p>
+                    <p>Descuento:</p>
+                    <p>Envio:</p>
+                    <p>IVA:</p>
+            
+                </div>
+                <div class="dt">
+                    <p id="subtotal">$0.00</p>
+                    <p>$0.00</p>
+                    <p>$0.00</p>
+                    <p>0.16%</p>
+                </div>
+            </div>
+            <hr>
+            <h4 id="total">Total   $.00</h4>
+            <button class="btnPagar">Pagar Carrito</button>
+        </div>
     </div>
     
     <footer class="footer">
