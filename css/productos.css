@@ -1,0 +1,88 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+.uno{
+    display: flex;
+}
+
+.uno>div{
+    width: 25%;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.uno>select{
+    width: 25%;
+    height: 38px;
+    margin-top: 32px;
+    margin-right: 2rem;
+}
+
+.dos, .tres{
+    display: flex;
+    justify-content: space-around;
+}
+
+.dos>div, .tres>div{
+    width: 40%;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.formulario>div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* .formulario{
+    display: none;
+} */
+
+.arriba{
+    min-height: calc(100% - 9%)
+}
+
+@media(max-width: 992px){
+    .uno>div{
+        width: 40%;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    
+    .uno>select{
+        width: 85%;
+        height: 38px;
+        margin-top: 32px;
+        margin-right: 2rem;
+    }
+
+    .btnedit,
+    .btnelim{
+        display: none;
+    }
+}
+
+@media(max-width: 655px){
+    .uno>div{
+        width: 90%;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    
+    .uno>select{
+        width: 90%;
+        height: 38px;
+        margin-top: 32px;
+        margin-right: 2rem;
+    }
+
+    .dos>div, .tres>div{
+        width: 90%;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}

@@ -131,7 +131,7 @@ h1{
 #c1:hover #titulo1,
 #c2:hover #titulo2,
 #c3:hover #titulo3{
- transform:translateY(-100px);
+ transform:translateY(-80px);
 }
 
 
